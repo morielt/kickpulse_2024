@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 const { Schema } = mongoose;
 
 // Define the Product schema
@@ -25,7 +25,7 @@ const ProductSchema = new Schema(
       required: true,
     },
     supplier: {
-      type: String,
+      type: Number,
       required: true,
     },
     image: {
@@ -36,12 +36,20 @@ const ProductSchema = new Schema(
       type: String,
       required: true,
     },
+    category: {
+      type: Number,
+      required: true,
+    },
+    gender: {
+      type: Number,
+      required: true,
+    },
   },
   {
     timestamps: true, // Adds createdAt and updatedAt timestamps
   }
 );
 
-const Products = mongoose.model("Product", ProductSchema);
+const Products = mongoose.model('Product', ProductSchema);
 
 export { Products as ProductsModel };

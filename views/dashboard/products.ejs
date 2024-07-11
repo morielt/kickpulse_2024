@@ -47,6 +47,12 @@
               <li class="nav-item">
                 <a class="nav-link" href="/dashboard/orders">Orders</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/dashboard/orders">Brand</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/dashboard/orders">Category</a>
+              </li>
             </ul>
           </div>
         </nav>
@@ -80,9 +86,17 @@
           >
         </div>
         <div class="col-lg-8 col-sm-9 col-12 products d-flex flex-wrap">
-          <% products.forEach(el => { %>
+          <% if(products.length == 0) { %>
+          <h4>You don't have any products..</h4>
+          <% } products.forEach(el => { %>
           <div class="col-md-4 col-sm-6 col-12 mb-4">
-            <div class="card">
+            <div class="card position-relative" data-product-id="<%=el._id %>">
+              <button
+                type="button"
+                class="btn btn-outline-danger delete-product"
+              >
+                X
+              </button>
               <img
                 src="<%= el.image %>"
                 class="card-img-top"
@@ -96,6 +110,8 @@
                 <p class="card-text">Quantity: <%= el.quantity %></p>
                 <p class="card-text">Supplier: <%= el.supplier %></p>
                 <p class="card-text">Brand: <%= el.brand %></p>
+                <p class="card-text">Category: <%= el.category %></p>
+                <p class="card-text">Gender: <%= el.gender %></p>
               </div>
             </div>
           </div>
@@ -103,7 +119,7 @@
         </div>
         <div class="col-lg-6 col-sm-8 col-12 offset-lg-1 add-product hidden">
           <h1 class="text-center">Add Product</h1>
-          <form action="/dashboard/products" method="POST">
+          <form class="add-product-form" action="/api/products" method="POST">
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="name">Product Name</label>
@@ -112,6 +128,7 @@
                   class="form-control"
                   id="name"
                   name="name"
+                  value="test1"
                   required
                 />
               </div>
@@ -122,6 +139,7 @@
                   class="form-control"
                   id="sizes"
                   name="sizes"
+                  value="1,2,3"
                   required
                 />
               </div>
@@ -135,6 +153,8 @@
                   id="price"
                   name="price"
                   step="0.01"
+                  min="0"
+                  value="500"
                   required
                 />
               </div>
@@ -145,6 +165,8 @@
                   class="form-control"
                   id="quantity"
                   name="quantity"
+                  min="0"
+                  value="5"
                   required
                 />
               </div>
@@ -158,17 +180,25 @@
                   name="description"
                   rows="3"
                   required
-                ></textarea>
+                >
+TEST DESCRIPTION</textarea
+                >
               </div>
               <div class="form-group col-md-6">
-                <label for="supplier">Supplier</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="supplier"
+                <p>Supplier</p>
+                <select
+                  class="form-select form-select-lg mb-3"
                   name="supplier"
+                  aria-label=".form-select-lg example"
                   required
-                />
+                >
+                  <option value="" disabled selected>
+                    Please select a supplier
+                  </option>
+                  <option value="1">One</option>
+                  <option value="2" selected>Two</option>
+                  <option value="3">Three</option>
+                </select>
               </div>
             </div>
             <div class="form-row">
@@ -179,18 +209,59 @@
                   class="form-control"
                   id="image"
                   name="image"
+                  value="https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-980x653.jpg"
                   required
                 />
               </div>
               <div class="form-group col-md-6">
-                <label for="brand">Brand</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="brand"
+                <p>Brand</p>
+                <select
+                  class="form-select form-select-lg mb-3"
                   name="brand"
+                  aria-label=".form-select-lg example"
                   required
-                />
+                >
+                  <option value="" disabled selected>
+                    Please select a brand
+                  </option>
+                  <option value="1">One</option>
+                  <option value="2" selected>Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <p>Category</p>
+                <select
+                  class="form-select form-select-lg mb-3"
+                  name="category"
+                  aria-label=".form-select-lg example"
+                  required
+                >
+                  <option value="" disabled selected>
+                    Please select a category
+                  </option>
+                  <option value="1">One</option>
+                  <option value="2" selected>Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+              <div class="form-group col-md-6">
+                <p>Gender</p>
+                <select
+                  class="form-select form-select-lg mb-3"
+                  name="gender"
+                  aria-label=".form-select-lg example"
+                  required
+                >
+                  <option value="" disabled selected>
+                    Please select a gender
+                  </option>
+                  <option value="1">Men</option>
+                  <option value="2">Women</option>
+                  <option value="3" selected>Kids</option>
+                </select>
               </div>
             </div>
             <div class="d-flex align-items-center justify-content-center">
@@ -199,6 +270,14 @@
               </button>
             </div>
           </form>
+          <div class="mt-4 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-center hidden" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+          <div
+            class="feedback-message container text-center mt-4 hidden fs-2"
+          ></div>
         </div>
       </div>
     </main>
@@ -206,6 +285,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="/js/dashboard.js"></script>
+    <script src="/js/dashboard/products.js"></script>
   </body>
 </html>
