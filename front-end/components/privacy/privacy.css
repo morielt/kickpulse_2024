@@ -6,7 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    direction: ltr;
+    direction: rtl;
     text-align: center;
 }
 
@@ -17,13 +17,11 @@ body {
     align-items: center;
     padding: 7px;
     position: relative;
-    direction: ltr;
-    }
-.logo-photo {
-    padding: 10px;
-    margin-left: auto;
 }
 
+.logo-photo {
+    padding: 10px;
+}
 
 .logo-photo img {
     margin-top: auto;
@@ -117,117 +115,41 @@ body {
     font-size: 18px;
 }
 
-.form-container {
-    display: flex;
-    justify-content: center;
-    padding: 50px;
+.mid {
     flex: 1;
-
-}
-
-.registration-form, .login-form {
-    width: 100%;
-    max-width: 500px;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    background: white;
+}
+
+.privacy_text {
+    max-width: 800px;
+    margin: auto;
     text-align: left;
+    line-height: 1.5;
+    direction: ltr; /* כיוון הטקסט משמאל לימין */
+    unicode-bidi: embed; /* הגדרה של unicode-bidi */
 }
 
-.registration-form h2, .login-form h2
- {
-    margin-bottom: 20px;
+.privacy_text h1, .privacy_text h2 {
     text-align: center;
-}
-
-.registration-form form, .login-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.registration-form label, .login-form label {
-    display: block;
-}
-.gender-options {
-    width: 200px;
-}
-
-.gender-options, .verification-options
-{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.gender-options label, .verification-options label {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-.gender-options input, .verification-options input {
-    margin-left: 5px;
-}
-
-.registration-form input, .login-form input {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: calc(100% - 22px);
-}
-
-button[type="submit"], .login-button {
-    background-color: black;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
     margin-top: 20px;
 }
 
-button[type="submit"]:hover, .login-button:hover {
-    background-color: #333;
+.privacy_text p, .privacy_text ul {
+    margin-bottom: 20px;
 }
 
-.mid {
-    background: url(../../photos/background.avif);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-}
-
-.checkbox-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    width: 180px;
-    justify-content: flex-start; 
-    flex-wrap: nowrap;
-    white-space: nowrap;}
-
-.checkbox-wrapper input[type="checkbox"] {
-    margin: 0;
-    padding: 0;
+.privacy_text ul {
+    list-style: disc;
+    padding-left: 20px;
 }
 
 footer {
     width: 100%;
-    background-color: white;
-    box-shadow: 8px 4px 8px 4px rgba(0, 0, 0, 0.1);    
-    color: black;
+    background-color: black;
+    color: white;
     padding: 20px 0;
     display: flex;
     justify-content: space-around;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    right: 0;
 }
 
 .footer-column {
@@ -250,11 +172,19 @@ footer {
 }
 
 .footer-column ul li a {
-    color: black;
+    color: white;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .footer-column ul li a:hover {
     color: #ddd;
+}
+.tophead
+{
+background-color: rgb(88, 3, 3);
+color: white;
+width: 100%;
+padding: 20px;
+border-bottom: 2px solid black;
 }

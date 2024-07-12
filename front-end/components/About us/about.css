@@ -10,21 +10,13 @@ body {
     text-align: center;
 }
 
-main {
-    flex: 1;
-    padding-bottom: 100px; /* Adjust the value as needed to create space between the content and the footer */
-}
-
 .top {
     border-bottom: 2px solid black;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 7px;
-    position: sticky; /* Changed from relative to sticky */
-    top: 0;
-    background-color: white;
-    z-index: 1000;
+    position: relative;
 }
 
 .logo-photo {
@@ -70,10 +62,11 @@ main {
     justify-content: center;
     align-items: center;
     width: 100%;
-    position: sticky;
-    top: 50px;
-    background-color: white;
-    z-index: 999;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
 }
 
 .selection-topbuttons .dropdown {
@@ -198,90 +191,16 @@ button[type="submit"]:hover, .login-button:hover {
     background-color: #333;
 }
 
-.mid {
-    font-family: Arial, sans-serif;
-    direction: rtl;
-    text-align: right;
-    width: 300px;
-}
-
-.collapsible {
-    background-color: white;
-    color: black;
-    cursor: pointer;
-    padding: 11px;
-    width:100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #ccc;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.collapsible:after {
-    content:  '▾';
-    font-size: 12px;
-    margin-left: 10px;
-}
-
-.active:after, .collapsible:hover:after {
-    content: '▴'
-}
-
-.content {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: white;
-    border-bottom: 1px solid #ccc;
-    max-height: 800px; /* Adjust based on your need */
-    overflow-y: auto;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-li {
-    padding: 8px 0;
-    display: flex;
-    align-items: center;
-}
-
-li input[type="checkbox"] {
-    margin-left: 10px;
-}
-
-.footer-column h2, .footer-column ul, .footer-column ul li {
-    text-align: left;
-}
-
-.container-fluid {
-    margin-left: 0;
-    width: 100%;
-    max-width: 100%;
-    padding: 0;
-    position: relative;
-    margin: 0;
-}
-
 footer {
     width: 100%;
-    background-color: white;
-    border-top: 0.5px solid black;
+    background-color: black;
     box-shadow: 8px 4px 8px 4px rgba(0, 0, 0, 0.1);    
-    color: black;
+    color: white;
     padding: 20px 0;
     display: flex;
     justify-content: space-around;
     position: relative;
-    bottom: -300px;
+    bottom: 0;
     left: 0;
     right: 0;
 }
@@ -306,7 +225,7 @@ footer {
 }
 
 .footer-column ul li a {
-    color: black;
+    color: white;
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -315,93 +234,33 @@ footer {
     color: #ddd;
 }
 
- {
-    background-color: white;
-}
-
-.col9_img {
-    width: 100%;
-    object-fit: cover;
-    height: 100%;
-    max-height: 550px;
-}
-
-.col9_img img {
-    object-fit: cover;
-    width: 100%;
-}
-
-.product-grid-container {
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    justify-content: flex-start;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
-    width: 100%;
-    max-width: 1200px;
-}
-
-.product-card {
-    position: relative; 
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-
-.product-card img {
-    width: 100%;
-    height: 180px; /* הקטנת גובה התמונה */
-    object-fit: cover;
-}
-
-.product-info {
-    padding: 15px;
+.aboutus {
+    padding: 20px;
+    justify-content: space-between;
     text-align: center;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    line-height: 2.3;
+    max-width: 600px; 
+    margin: 0 auto;
+    direction: ltr;
+    white-space: normal; 
+    margin-bottom: 40px; 
 }
 
-.product-info h3 {
-    margin: 0 0 10px 0;
-    font-size: 18px;
+.img_about img {
+    padding: 20px;
+    width: 800px;
+    height: 400px;
 }
 
-.product-info p {
-    margin: 5px 0;
+.mid {
+    padding-left: 40px;
+    padding-right: 50px;
 }
-
-.product-info .price {
-    font-weight: bold;
-    color: #000;
+.tophead
+{
+background-color: rgb(88, 3, 3);
+color: white;
+width: 100%;
+padding: 20px;
+border-bottom: 2px solid black;
 }
-.product-info .new-badge {
-    background-color: #000;
-    color: #fff;
-    padding: 3px 6px;
-    border-radius: 4px;
-    font-size: 12px;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-}
-
-.checkbox-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-}
-
-

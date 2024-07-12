@@ -167,7 +167,7 @@ button[type="submit"]:hover, .login-button:hover {
 }
 
 .mid {
-    background: url(../../photos-login/background.avif);
+    background: url(../../photos/background.avif);
     background-size: cover;
     background-position: center;
     flex: 1;

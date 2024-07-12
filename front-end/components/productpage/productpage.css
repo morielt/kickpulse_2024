@@ -323,8 +323,9 @@ footer {
 {
     width: 100%;
     object-fit: cover;
-    height: 550px;
-    max-height: 550px;
+    height: 450px;
+    max-height: 450px;
+    margin-bottom :90px;
 }
 
 .col9_img img {

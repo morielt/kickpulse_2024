@@ -6,7 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    direction: ltr;
+    direction: rtl;
     text-align: center;
 }
 
@@ -17,13 +17,11 @@ body {
     align-items: center;
     padding: 7px;
     position: relative;
-    direction: ltr;
-    }
-.logo-photo {
-    padding: 10px;
-    margin-left: auto;
 }
 
+.logo-photo {
+    padding: 10px;
+}
 
 .logo-photo img {
     margin-top: auto;
@@ -119,26 +117,21 @@ body {
 
 .form-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     padding: 50px;
     flex: 1;
-
 }
 
 .registration-form, .login-form {
-    width: 100%;
-    max-width: 500px;
+    width: 40%;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     background: white;
-    text-align: left;
 }
 
-.registration-form h2, .login-form h2
- {
+.registration-form h2, .login-form h2 {
     margin-bottom: 20px;
-    text-align: center;
 }
 
 .registration-form form, .login-form form {
@@ -148,14 +141,15 @@ body {
 }
 
 .registration-form label, .login-form label {
-    display: block;
+    text-align: right;
+    display: block; 
 }
+
 .gender-options {
     width: 200px;
 }
 
-.gender-options, .verification-options
-{
+.gender-options, .verification-options {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -168,6 +162,7 @@ body {
     align-items: center;
     gap: 5px;
 }
+
 .gender-options input, .verification-options input {
     margin-left: 5px;
 }
@@ -177,7 +172,9 @@ body {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: calc(100% - 22px);
+    width: 80%;
+    position: relative;
+    right: 20px;
 }
 
 button[type="submit"], .login-button {
@@ -194,33 +191,11 @@ button[type="submit"]:hover, .login-button:hover {
     background-color: #333;
 }
 
-.mid {
-    background: url(../../photos/background.avif);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-}
-
-.checkbox-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    width: 180px;
-    justify-content: flex-start; 
-    flex-wrap: nowrap;
-    white-space: nowrap;}
-
-.checkbox-wrapper input[type="checkbox"] {
-    margin: 0;
-    padding: 0;
-}
-
 footer {
     width: 100%;
-    background-color: white;
+    background-color: black;
     box-shadow: 8px 4px 8px 4px rgba(0, 0, 0, 0.1);    
-    color: black;
+    color: white;
     padding: 20px 0;
     display: flex;
     justify-content: space-around;
@@ -250,11 +225,36 @@ footer {
 }
 
 .footer-column ul li a {
-    color: black;
+    color: white;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .footer-column ul li a:hover {
     color: #ddd;
+}
+
+.terms {
+    padding: 50px;
+    justify-content: center;
+    line-height: 2.0;
+    max-width: 900px; 
+    text-align: center; 
+    direction: ltr; 
+    margin-bottom: 40px; 
+    word-wrap: break-word; 
+    margin-right: 200px;
+}
+
+.terms h1 {
+    font-weight: bold;
+    text-align: center;
+}
+.tophead
+{
+background-color: rgb(88, 3, 3);
+color: white;
+width: 100%;
+padding: 20px;
+border-bottom: 2px solid black;
 }
