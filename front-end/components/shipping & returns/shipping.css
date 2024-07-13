@@ -8,33 +8,26 @@ body {
     min-height: 100vh;
     direction: rtl;
     text-align: center;
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
 }
 
 .top {
-
+    border-bottom: 2px solid black;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 7px;
     position: relative;
-    border-top: #333;
 }
 
 .logo-photo {
-        padding: 10px;
-        position:relative;
-        top: 10px; /* Adjust as needed */
-        left:600px; /* Adjust as needed */
+    padding: 10px;
 }
 
 .logo-photo img {
+    margin-top: auto;
     width: 130px;
-    margin: 0; /* Remove any margins */
     position: relative;
 }
-
 
 .buttons-top {
     display: flex;
@@ -241,170 +234,156 @@ footer {
     color: #ddd;
 }
 
-.card {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    width: 400px;
-    border: 2px solid black; /* Added black border */
-    margin-left: -800px;
-    margin-bottom: 30px;
-    margin-top: 20px; /* Move the card slightly down */
-}
-
-h2 {
-    font-size: 18px;
+.delivery-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 20px;
     direction: ltr;
 }
 
-.form-group {
-    margin-bottom: 30px;
+.icon {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    margin-right: 20px;
 }
 
-label {
-    display: block;
+.icon.standard {
+    background-image: url('standard-delivery-icon.png'); 
+}
+
+.icon.express {
+    background-image: url('express-delivery-icon.png'); 
+}
+
+.details {
+    flex: 1;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 1.5em;
     font-weight: bold;
-    margin-bottom: 5px;
-}
-
-input, textarea {
-    width: calc(100% - 12px);
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-textarea {
-    height: 80px;
-    resize: none;
-}
-
-button {
-    background-color: #333;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-.tophead
-{
-background-color: rgb(88, 3, 3);
-color: white;
-width: 100%;
-padding: 20px;
-border-bottom: 2px solid black;
-}
-.imgcontectus {
-    width: 100px; /* Adjust width as needed */
-    height: 200px; /* Adjust height as needed */
-    position: absolute;
-    top: 50%; /* Center vertically */
-    left: 500px; /* Adjust horizontal position as needed */
-    transform: translateY(-50%);
-}
-
-
-.card {
-    position: relative;
-    left: 70px; /* Adjust horizontal position as needed */
-}
-body {
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    margin-left: 20px;
     direction: rtl;
-    text-align: center;
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
-    position: relative;
 }
 
-
-.imgcontectus img
-{
-    width: 800px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
-    position: absolute;
-    top: 50%; /* Center vertically */
-    left: calc(50%); /* Position to the right of the card */
-    transform: translateY(-50%);
+.return-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin-bottom: 40px;
+    direction: ltr;
 }
 
+.return-section .details {
+    flex: 1;
+    max-width: 1000px;
+}
 
+hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+    width: 100%;
+}
 
-.card {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
-    width: 400px;
-    border: 2px solid black;
-    margin-top: 20px;
-    position: relative;
-    z-index: 1;
-    margin-left: -950px;
-}
-.success-message
- {
-    display: none;
-    background-color: #e0f2f1;
-    color: #00796b;
-    padding: 15px;
-    border: 1px solid #b2dfdb;
-    border-radius: 4px;
-    margin-top: 20px;
 }
 
-.imgcontectus {
-    width: 100px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
-    position: absolute;
-    top: 50%; /* Center vertically */
-    left: calc(40%); /* Position to the right of the card */
-    transform: translateY(-50%);
+.header, .section, .delivery-option {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    direction: ltr;
 }
 
-/* Existing styles */
-body {
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+.header h1, .section h2, .delivery-option h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    direction: ltr;
+}
+
+.header p, .section p, .delivery-option p {
+    font-size: 16px;
+    line-height: 1.5;
+    direction: ltr;
+}
+
+.section ul, .delivery-option ul {
+    list-style-type: none;
+    padding-left: 0;
+    direction: ltr;
+}
+
+.section ul li, .delivery-option ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    direction: ltr;
+}
+
+.section ul li:before, .delivery-option ul li:before {
+    content: '•';
+    margin-right: 10px;
+    color: #333;
+    
+}
+.help-section {
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    direction: rtl;
-    text-align: center;
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin-bottom: 40px;
+    direction: ltr;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
 }
 
 
-
-.success-message {
-    display: none;
-    background-color: #e0f2f1;
-    color: #00796b;
-    padding: 15px;
-    border: 1px solid #b2dfdb;
-    border-radius: 4px;
-    margin-top: 20px;
+hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+    width: 100%;
+}
+.details a
+{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+.help-section {
+    text-align: center;
+    margin: 40px 0;
 }
 
-/* New style for h2 element after success */
-.success-message-style {
-    background-color: #e0f2f1;
-    color: #00796b;
-    padding: 15px;
-    border: 1px solid #b2dfdb;
-    border-radius: 4px;
-    margin-top: 20px;
+.help-section .details {
+    display: inline-block;
     text-align: center;
+    max-width: 800px; /* Optional: to restrict the width */
+}
+
+.help-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.help-section p {
+    font-size: 1.2em;
+    line-height: 1.5;
 }

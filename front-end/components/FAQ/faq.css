@@ -193,9 +193,9 @@ button[type="submit"]:hover, .login-button:hover {
 
 footer {
     width: 100%;
-    background-color: white;
+    background-color: black;
     box-shadow: 8px 4px 8px 4px rgba(0, 0, 0, 0.1);    
-    color: black;
+    color: white;
     padding: 20px 0;
     display: flex;
     justify-content: space-around;
@@ -225,7 +225,7 @@ footer {
 }
 
 .footer-column ul li a {
-    color: black;
+    color: white;
     text-decoration: none;
     transition: color 0.3s;
 }
