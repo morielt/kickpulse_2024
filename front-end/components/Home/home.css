@@ -483,3 +483,14 @@ footer {
 .footer-column ul li a:hover {
     color: #ddd;
 }
+.sign a
+{
+    color: black;
+    transition: transform 0.5s ease;
+}
+.sign a:hover
+{
+ cursor: pointer;
+ color: blue;   
+
+}

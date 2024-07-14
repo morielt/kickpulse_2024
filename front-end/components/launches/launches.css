@@ -315,3 +315,14 @@ padding: 20px;
 border-bottom: 2px solid black;
 padding-top: none;
 }
+.sign a
+{
+    color: black;
+    transition: transform 0.5s ease;
+}
+.sign a:hover
+{
+ cursor: pointer;
+ color: blue;   
+
+}
