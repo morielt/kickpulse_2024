@@ -9,202 +9,12 @@ body {
     direction: rtl;
     text-align: center;
 }
-
-main {
-    flex: 1;
-    padding-bottom: 100px; /* Adjust the value as needed to create space between the content and the footer */
-}
-
-.top {
-    border-bottom: 2px solid black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 7px;
-    position: sticky; /* Changed from relative to sticky */
-    top: 0;
-    background-color: white;
-    z-index: 1000;
-}
-
-.logo-photo {
-    padding: 10px;
-}
-
-.logo-photo img {
-    margin-top: auto;
-    width: 130px;
-    position: relative;
-}
-
-.buttons-top {
-    display: flex;
-    gap: 10px;
-    padding: 10px;
-    order: -1;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-}
-
-.buttons-top button {
-    background-color: transparent;
-    border: none;
-    align-content: center;
-    padding: 0;
-}
-
-.buttons-top button svg {
-    width: 20px;
-    height: 24px;
-    fill: currentColor;
-}
-
-.buttons-top button:hover {
-    cursor: pointer;
-}
-
-.selection-topbuttons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    position: sticky;
-    top: 50px;
-    background-color: white;
-    z-index: 999;
-}
-
-.selection-topbuttons .dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.selection-topbuttons .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 100%;
-}
-
-.selection-topbuttons .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.selection-topbuttons .dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-.selection-topbuttons .dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.selection-topbuttons button {
-    border: none;
-    color: black;
-    background-color: white;
-    font-weight: bold;
-    padding: 10px 20px;
-    position: relative;
-    cursor: pointer;
-}
-
-.dropbtn {
-    font-size: 18px;
-}
-
-.form-container {
-    display: flex;
-    justify-content: space-around;
-    padding: 50px;
-    flex: 1;
-}
-
-.registration-form, .login-form {
-    width: 40%;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    background: white;
-}
-
-.registration-form h2, .login-form h2 {
-    margin-bottom: 20px;
-}
-
-.registration-form form, .login-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.registration-form label, .login-form label {
-    text-align: right;
-    display: block; 
-}
-
-.gender-options {
-    width: 200px;
-}
-
-.gender-options, .verification-options {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.gender-options label, .verification-options label {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.gender-options input, .verification-options input {
-    margin-left: 5px;
-}
-
-.registration-form input, .login-form input {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 80%;
-    position: relative;
-    right: 20px;
-}
-
-button[type="submit"], .login-button {
-    background-color: black;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-button[type="submit"]:hover, .login-button:hover {
-    background-color: #333;
-}
-
 .mid {
     font-family: Arial, sans-serif;
     direction: rtl;
     text-align: right;
     width: 300px;
 }
-
 .collapsible {
     background-color: white;
     color: black;
@@ -229,7 +39,7 @@ button[type="submit"]:hover, .login-button:hover {
 }
 
 .active:after, .collapsible:hover:after {
-    content: '▴'
+    content: '▴';
 }
 
 .content {
@@ -319,13 +129,12 @@ footer {
     background-color: white;
 }
 
-.col9_img 
-{
+.col9_img {
     width: 100%;
     object-fit: cover;
     height: 450px;
     max-height: 450px;
-    margin-bottom :90px;
+    margin-bottom: 90px;
 }
 
 .col9_img img {
@@ -388,17 +197,221 @@ footer {
     font-weight: bold;
     color: #000;
 }
+
 .checkbox-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 20px;
 }
-.tophead
-{
-background-color: rgb(88, 3, 3);
-color: white;
-width: 100%;
-padding: 20px;
-border-bottom: 2px solid black;
+
+.tophead {
+    background-color: rgb(88, 3, 3);
+    color: white;
+    width: 100%;
+    padding: 20px;
+    border-bottom: 2px solid black;
 }
+
+.search-container 
+{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    position: absolute;
+    z-index: 3;
+    left: 70px;
+    top: 5px;
+}
+
+.sign {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    order: -1;
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    direction:ltr;
+}
+.sign a
+{
+    color: black;
+}
+.buttnse
+{
+    margin: none;
+
+}
+#input_
+{
+    border: none;
+}
+
+#input_:hover,
+#input_:focus,
+#input_:active {
+    outline: none;
+    border: none;
+}
+
+.searchbox
+{
+    border: 1px solid black;
+    padding: 3px;
+    border-radius: 5px;
+    margin-top: 12px;
+}
+
+.sign a {
+    color: black;
+    transition: transform 0.5s ease;
+}
+
+.sign a:hover {
+    cursor: pointer;
+    color: blue;   
+}
+
+.logo-photo img {
+    width: 10vw; /* Use viewport width for resizing */
+}
+
+.logo-photo {
+    position: relative;
+    width: 100%;
+    left: 95%;
+    transform: translateX(-50%);
+    top: 2vw; /* Use viewport width for positioning */
+}
+
+.topleft {
+    position: relative;
+    right: 44%;
+    font-size: 1.5vw; /* Adjust the font size proportionally */
+}
+
+.buttons-top {
+    position: relative;
+    bottom: 6vw; /* Adjust based on viewport size */
+    gap: 1vw; /* Adjust gap based on viewport size */
+    left: 5%;
+}
+
+.buttons-top button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5vw; /* Adjust font size proportionally */
+}
+
+.buttons-top button:hover {
+    cursor: pointer;
+}
+
+.shopping-bag {
+    position: fixed;
+}
+
+.sign {
+    top: 1vw; /* Adjust based on viewport size */
+    position: relative;
+    font-size: 1.5vw; /* Adjust font size proportionally */
+}
+
+.search-container {
+    position: relative;
+    border: 0.1vw solid black; /* Adjust border thickness proportionally */
+    border-radius: 0.7vw; /* Adjust border radius proportionally */
+    width: fit-content;
+    right: 30%;
+    bottom: 7vw; /* Adjust based on viewport size */
+}
+
+#input_ {
+    background-color: transparent;
+    border: none;
+    padding: 1vw; /* Adjust padding proportionally */
+    font-size: 1.5vw; /* Adjust font size proportionally */
+}
+
+#input_:hover,
+#input_:focus,
+#input_:active {
+    outline: none;
+    border: none;
+}
+
+.searchbox button {
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    font-size: 1.5vw; /* Adjust font size proportionally */
+}
+
+.bi.bi-search {
+    position: relative;
+    top: 0.3vw; /* Adjust based on viewport size */
+}
+
+.searchbox button:hover {
+    cursor: pointer;
+}
+
+.selection-topbuttons {
+    display: flex;
+    gap: 2vw; /* Adjust gap as per your preference */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.selection-topbuttons .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.selection-topbuttons .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.selection-topbuttons .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.selection-topbuttons .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.selection-topbuttons .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.selection-topbuttons button {
+    border: none;
+    color: black;
+    background-color: white;
+    font-weight: bold;
+    padding: 1vw 2vw; /* Use viewport units for padding */
+    font-size: 1.5vw; /* Use viewport units for font size */
+    position: relative;
+    cursor: pointer;
+}
+
+.dropbtn {
+    font-size: 1.5vw; /* Use viewport units for font size */
+}
+
